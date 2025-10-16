@@ -53,3 +53,10 @@ build/
 *.zip
 *.tar.gz
 *.rar
+
+# TypeScript build outputs
+src/*.d.ts
+src/*.d.ts.map
+src/*.js.map
+dist/*.map
+dist/*.d.ts

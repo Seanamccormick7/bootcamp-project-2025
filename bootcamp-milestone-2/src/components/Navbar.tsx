@@ -1,29 +1,56 @@
 import React from "react";
 import Link from "next/link";
-import style from "./navbar.module.css";
+import { robotoMono } from "@/app/layout";
 
 export default function Navbar() {
   return (
     <header>
-      <nav className={style.navbar}>
-        <h1 className={style.logo}>
-          <Link href="/">personal website</Link>
+      <nav className="sticky top-0 w-full z-10 flex justify-between items-center text-center bg-[rgb(30,32,32)] text-white py-4 px-8">
+        <h1 className="text-xl font-bold">
+          <Link href="/" className="hover:no-underline">
+            personal website
+          </Link>
         </h1>
-        <ul className={style.navList}>
+        <ul className="flex flex-row list-none gap-6">
           <li>
-            <Link href="/">Home</Link>
+            <Link
+              href="/"
+              className={`text-white font-bold no-underline tracking-[2px] hover:text-[rgb(36,94,255)] hover:underline ${robotoMono.className}`}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/portfolio">Portfolio</Link>
+            <Link
+              href="/portfolio"
+              className={`text-white font-bold no-underline tracking-[2px] hover:text-[rgb(36,94,255)] hover:underline ${robotoMono.className}`}
+            >
+              Portfolio
+            </Link>
           </li>
           <li>
-            <Link href="/resume">Resume</Link>
+            <Link
+              href="/resume"
+              className={`text-white font-bold no-underline tracking-[2px] hover:text-[rgb(36,94,255)] hover:underline ${robotoMono.className}`}
+            >
+              Resume
+            </Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link
+              href="/blog"
+              className={`text-white font-bold no-underline tracking-[2px] hover:text-[rgb(36,94,255)] hover:underline ${robotoMono.className}`}
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link
+              href="/contact"
+              className={`text-white font-bold no-underline tracking-[2px] hover:text-[rgb(36,94,255)] hover:underline ${robotoMono.className}`}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

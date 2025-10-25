@@ -1,36 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BlogPreview from "@/components/BlogPreview";
 import blogs from "@/app/blogData";
 
 export default function Blog() {
   return (
-    <>
-      <Navbar />
-      <main
-        style={{
-          padding: "0 20px 40px 20px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "40px",
-            fontFamily: "Georgia",
-            textAlign: "center",
-          }}
-        >
-          Blog
-        </h1>
-        <div style={{ maxWidth: "900px", width: "100%", margin: "0 auto" }}>
-          {blogs.map((blog) => (
-            <BlogPreview key={blog.slug} {...blog} />
-          ))}
-        </div>
-      </main>
-      <Footer />
-    </>
+    <main className="px-5 pt-10 pb-10 flex flex-col items-center">
+      <h1 className="text-5xl text-center font-black">Blog</h1>
+      <div className="max-w-[900px] w-full mx-auto">
+        {blogs.map((blog) => (
+          <BlogPreview key={blog.slug} {...blog} />
+        ))}
+      </div>
+    </main>
   );
 }

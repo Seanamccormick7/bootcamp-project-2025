@@ -1,52 +1,66 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div></div>
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div></div>
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+    <>
+      <Navbar />
+      <main style={{ padding: "0 20px 40px 20px" }}>
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "40px",
+            fontFamily: "Georgia",
+          }}
+        >
+          Hi, I&apos;m Sean McCormick!
+        </h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "20px",
+            backgroundColor: "#f8f8f8",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}
+        >
+          <div style={{ flexShrink: 0 }}>
+            <Image
+              src="/images/Sean-image.jpg"
+              alt="Sean McCormick"
+              width={280}
+              height={380}
+              style={{
+                objectFit: "cover",
+                borderRadius: "8px",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+              }}
+            />
+          </div>
+          <div style={{ flex: 1, marginLeft: "20px" }}>
+            <h2 style={{ fontSize: "24px", marginBottom: "10px" }}>About Me</h2>
+            <p style={{ fontSize: "16px", lineHeight: "1.5" }}>
+              I&apos;m a <strong>Computer Science student</strong> at California
+              Polytechnic State University, San Luis Obispo, expected to
+              graduate in <strong>June 2027</strong>. I just transferred in from
+              the Bay Area, and I&apos;m passionate about building full-stack
+              web applications and solving real-world problems.
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: "1.5" }}>
+              I also love working with technologies like <strong>React</strong>,
+              <strong> Node.js</strong>, <strong>TypeScript</strong>, and
+              <strong> AWS</strong>. Check out my portfolio to see some of the
+              projects I&apos;ve built!
+            </p>
+          </div>
         </div>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }

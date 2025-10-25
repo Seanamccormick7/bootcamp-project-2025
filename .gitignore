@@ -60,3 +60,5 @@ src/*.d.ts.map
 src/*.js.map
 dist/*.map
 dist/*.d.ts
+
+bootcamp-milestone-1/

@@ -1,7 +1,40 @@
 import BlogPreview from "@/components/BlogPreview";
-import blogs from "@/app/blogData";
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema";
 
-export default function Blog() {
+async function getBlogs() {
+  await connectDB();
+
+  try {
+    const blogs = await Blog.find().sort({ date: -1 }).lean().orFail();
+
+    return blogs.map((blog) => ({
+      title: blog.title,
+      slug: blog.slug,
+      date: blog.date.toISOString(),
+      description: blog.description,
+      content: blog.content,
+      image: blog.image,
+      image_alt: blog.image_alt,
+    }));
+  } catch (err) {
+    console.error("Error fetching blogs:", err);
+    return null;
+  }
+}
+
+export default async function BlogPage() {
+  const blogs = await getBlogs();
+
+  if (!blogs || blogs.length === 0) {
+    return (
+      <main className="px-5 pt-10 pb-10 flex flex-col items-center">
+        <h1 className="text-5xl text-center font-black">Blog</h1>
+        <p className="mt-8 text-lg">No blogs found.</p>
+      </main>
+    );
+  }
+
   return (
     <main className="px-5 pt-10 pb-10 flex flex-col items-center">
       <h1 className="text-5xl text-center font-black">Blog</h1>

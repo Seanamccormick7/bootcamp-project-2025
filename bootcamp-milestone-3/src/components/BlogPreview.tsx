@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Blog } from "@/app/blogData";
+import { Blog } from "@/database/blogSchema";
 
 export default function BlogPreview({
   title,

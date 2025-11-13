@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-type Project = {
+export type Project = {
   title: string;
   slug: string;
   description: string;
@@ -28,7 +28,7 @@ const projectSchema = new Schema<Project>({
   ],
 });
 
-const Project =
+const ProjectModel =
   mongoose.models["projects"] || mongoose.model("projects", projectSchema);
 
-export default Project;
+export default ProjectModel;

@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-type Blog = {
+export type Blog = {
   title: string;
   slug: string;
   date: Date;
@@ -20,6 +20,7 @@ const blogSchema = new Schema<Blog>({
   content: { type: String, required: true },
 });
 
-const Blog = mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);
+const BlogModel =
+  mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);
 
-export default Blog;
+export default BlogModel;

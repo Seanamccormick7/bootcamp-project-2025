@@ -1,17 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  technologies: string;
-  image: string;
-  image_alt: string;
-  links: {
-    label: string;
-    url: string;
-  }[];
-}
+import { Project } from "@/database/projectSchema";
 
 export default function ProjectCard({
   title,
@@ -20,7 +9,7 @@ export default function ProjectCard({
   image,
   image_alt,
   links,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <div className="flex flex-row max-w-[900px] w-full my-8 mx-auto">
       <a

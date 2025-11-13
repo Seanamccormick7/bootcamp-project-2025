@@ -6,7 +6,7 @@ interface ProjectCardProps {
   description: string;
   technologies: string;
   image: string;
-  imageAlt: string;
+  image_alt: string;
   links: {
     label: string;
     url: string;
@@ -18,7 +18,7 @@ export default function ProjectCard({
   description,
   technologies,
   image,
-  imageAlt,
+  image_alt,
   links,
 }: ProjectCardProps) {
   return (
@@ -31,7 +31,7 @@ export default function ProjectCard({
       >
         <Image
           src={image}
-          alt={imageAlt}
+          alt={image_alt}
           width={400}
           height={225}
           className="object-cover w-full h-[500px]"

@@ -8,7 +8,7 @@ export default function BlogPreview({
   date,
   description,
   image,
-  imageAlt,
+  image_alt,
   slug,
 }: Blog) {
   return (
@@ -16,7 +16,7 @@ export default function BlogPreview({
       <Link href={`/blog/${slug}`} className="no-underline text-inherit">
         <Image
           src={image}
-          alt={imageAlt}
+          alt={image_alt}
           width={900}
           height={260}
           className="w-full h-auto object-cover rounded mb-2.5"

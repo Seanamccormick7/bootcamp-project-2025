@@ -16,6 +16,7 @@ async function getBlogs() {
       content: blog.content,
       image: blog.image,
       image_alt: blog.image_alt,
+      comments: blog.comments || [],
     }));
   } catch (err) {
     console.error("Error fetching blogs:", err);

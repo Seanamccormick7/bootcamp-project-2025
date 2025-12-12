@@ -19,7 +19,7 @@ export default function BlogPreview({
           alt={image_alt}
           width={900}
           height={260}
-          className="w-full h-auto object-cover rounded-md mb-4 hover:opacity-90 transition-opacity duration-300"
+          className="w-full h-[300px] object-cover rounded-md mb-4 hover:opacity-90 transition-opacity duration-300"
         />
         <h2 className="my-3 font-bold text-2xl text-[rgb(30,32,32)] hover:text-[rgb(36,94,255)] transition-colors duration-300">
           {title}

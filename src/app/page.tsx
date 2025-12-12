@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className="text-center text-5xl font-black">
         Hi, I&apos;m Sean McCormick!
       </h1>
-      <div className="flex items-center justify-between p-5 bg-[#f8f8f8] border border-[#ccc] rounded-md max-w-[900px] mx-auto mt-8">
+      <div className="flex items-center justify-between p-5 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 max-w-[900px] mx-auto mt-8">
         <div className="flex-shrink-0">
           <Image
             src="/images/Sean-image.jpg"

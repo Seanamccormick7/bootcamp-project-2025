@@ -3,6 +3,7 @@ import Link from "next/link";
 import connectDB from "@/database/db";
 import BlogModel, { Blog } from "@/database/blogSchema";
 import Comment from "@/components/Comment";
+import CommentForm from "@/components/CommentForm";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -89,6 +90,8 @@ export default async function BlogPage({ params }: Props) {
               No comments yet. Be the first to comment!
             </p>
           )}
+
+          <CommentForm slug={slug} />
         </section>
       </article>
     </main>
